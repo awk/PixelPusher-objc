@@ -12,6 +12,11 @@
 #import "PixelPusher.h"
 #import "DeviceRegistry.h"
 
+@interface pixelpusher_osxTests () {
+    NSInteger _notificationCount;
+}
+
+@end
 @implementation pixelpusher_osxTests
 
 NSData *sampleData;
@@ -64,10 +69,23 @@ NSData *sampleData;
 
 - (void) testDeviceRegistry {
     DeviceRegistry *aDeviceRegistry = [[DeviceRegistry alloc] init];
+    
+    [aDeviceRegistry addObserver:self forKeyPath:@"pushers" options:0 context:nil];
+    
     [aDeviceRegistry receive:sampleData];
     STAssertEquals([aDeviceRegistry.pusherMap count], (NSUInteger) 1, @"One PixelPusher Detected");
 
     [aDeviceRegistry receive:sampleData];
     STAssertEquals([aDeviceRegistry.pusherMap count], (NSUInteger) 1, @"Still One PixelPusher Detected");
+    
+    STAssertEquals(_notificationCount, (NSInteger) 1, @"Single notification of new pusher");
 }
+
+- (void)observeValueForKeyPath:(NSString *)keyPath
+                      ofObject:(id)object
+                        change:(NSDictionary *)change
+                       context:(void *)context {
+    _notificationCount++;
+}
+
 @end
