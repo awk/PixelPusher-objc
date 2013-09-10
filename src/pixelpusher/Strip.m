@@ -20,7 +20,7 @@
 @property (nonatomic, readonly) NSUInteger length;
 @end
 
-static uint8 sLinearExp[] =
+static uint8_t sLinearExp[] =
     { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
       0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
       1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
@@ -132,7 +132,7 @@ static uint8 sLinearExp[] =
     [_pusher markTouched];
 }
 
-- /*synchronized*/ (void) setPixelRed:(uint8) intensity atPosition:(int) position
+- /*synchronized*/ (void) setPixelRed:(uint8_t) intensity atPosition:(int) position
 {
     if (position >= [self.pixels count]) {
         return;
@@ -147,7 +147,7 @@ static uint8 sLinearExp[] =
     [_pusher markTouched];
 }
 
-- /*synchronized*/ (void) setPixelBlue:(uint8) intensity atPosition:(int) position
+- /*synchronized*/ (void) setPixelBlue:(uint8_t) intensity atPosition:(int) position
 {
     if (position >= [self.pixels count]) {
         return;
@@ -163,7 +163,7 @@ static uint8 sLinearExp[] =
     [_pusher markTouched];
 }
 
-- /*synchronized*/ (void) setPixelGreen:(uint8) intensity atPosition:(int) position
+- /*synchronized*/ (void) setPixelGreen:(uint8_t) intensity atPosition:(int) position
 {
     if (position >= [self.pixels count]) {
         return;
@@ -179,7 +179,7 @@ static uint8 sLinearExp[] =
     [_pusher markTouched];
 }
 
-- /*synchronized*/ (void) setPixelOrange:(uint8) intensity atPosition:(int) position
+- /*synchronized*/ (void) setPixelOrange:(uint8_t) intensity atPosition:(int) position
 {
     if (position >= [self.pixels count]) {
         return;
@@ -195,7 +195,7 @@ static uint8 sLinearExp[] =
     [_pusher markTouched];
 }
 
-- /*synchronized*/ (void) setPixelWhite:(uint8) intensity atPosition:(int) position
+- /*synchronized*/ (void) setPixelWhite:(uint8_t) intensity atPosition:(int) position
 {
     if (position >= [self.pixels count]) {
         return;
@@ -211,7 +211,11 @@ static uint8 sLinearExp[] =
     [_pusher markTouched];
 }
 
+#ifdef __MAC_OS_X_VERSION_MAX_ALLOWED
 - /*synchronized*/ (void) setPixelColor:(NSColor *) color atPosition:(int) position
+#else
+- /*synchronized*/ (void) setPixelColor:(UIColor *) color atPosition:(int) position
+#endif
 {
     if (position >= [self.pixels count]) {
         return;
@@ -250,29 +254,29 @@ static uint8 sLinearExp[] =
                 pixel = [[Pixel alloc] init];
             
             if (phase) {
-                serializedMsg[i++] = (uint8) (((double)pixel.red)   * self.powerScale);    // C
-                serializedMsg[i++] = (uint8) (((double)pixel.green) * self.powerScale);
-                serializedMsg[i++] = (uint8) (((double)pixel.blue)  * self.powerScale);
+                serializedMsg[i++] = (uint8_t) (((double)pixel.red)   * self.powerScale);    // C
+                serializedMsg[i++] = (uint8_t) (((double)pixel.green) * self.powerScale);
+                serializedMsg[i++] = (uint8_t) (((double)pixel.blue)  * self.powerScale);
                 
-                serializedMsg[i++] = (uint8) (((double)pixel.orange) * self.powerScale);   // O
-                serializedMsg[i++] = (uint8) (((double)pixel.orange) * self.powerScale);
-                serializedMsg[i++] = (uint8) (((double)pixel.orange) * self.powerScale);
+                serializedMsg[i++] = (uint8_t) (((double)pixel.orange) * self.powerScale);   // O
+                serializedMsg[i++] = (uint8_t) (((double)pixel.orange) * self.powerScale);
+                serializedMsg[i++] = (uint8_t) (((double)pixel.orange) * self.powerScale);
                 
-                serializedMsg[i++] = (uint8) (((double)pixel.white) * self.powerScale);    // W
-                serializedMsg[i++] = (uint8) (((double)pixel.white) * self.powerScale);
-                serializedMsg[i++] = (uint8) (((double)pixel.white) * self.powerScale);
+                serializedMsg[i++] = (uint8_t) (((double)pixel.white) * self.powerScale);    // W
+                serializedMsg[i++] = (uint8_t) (((double)pixel.white) * self.powerScale);
+                serializedMsg[i++] = (uint8_t) (((double)pixel.white) * self.powerScale);
             } else {
-                serializedMsg[i++] = (uint8) (((double)pixel.red)   * self.powerScale);    // C
-                serializedMsg[i++] = (uint8) (((double)pixel.green) * self.powerScale);
-                serializedMsg[i++] = (uint8) (((double)pixel.blue)  * self.powerScale);
+                serializedMsg[i++] = (uint8_t) (((double)pixel.red)   * self.powerScale);    // C
+                serializedMsg[i++] = (uint8_t) (((double)pixel.green) * self.powerScale);
+                serializedMsg[i++] = (uint8_t) (((double)pixel.blue)  * self.powerScale);
                 
-                serializedMsg[i++] = (uint8) (((double)pixel.white) * self.powerScale);    // W
-                serializedMsg[i++] = (uint8) (((double)pixel.white) * self.powerScale);
-                serializedMsg[i++] = (uint8) (((double)pixel.white) * self.powerScale);
+                serializedMsg[i++] = (uint8_t) (((double)pixel.white) * self.powerScale);    // W
+                serializedMsg[i++] = (uint8_t) (((double)pixel.white) * self.powerScale);
+                serializedMsg[i++] = (uint8_t) (((double)pixel.white) * self.powerScale);
                 
-                serializedMsg[i++] = (uint8) (((double)pixel.orange) * self.powerScale);   // O
-                serializedMsg[i++] = (uint8) (((double)pixel.orange) * self.powerScale);
-                serializedMsg[i++] = (uint8) (((double)pixel.orange) * self.powerScale);
+                serializedMsg[i++] = (uint8_t) (((double)pixel.orange) * self.powerScale);   // O
+                serializedMsg[i++] = (uint8_t) (((double)pixel.orange) * self.powerScale);
+                serializedMsg[i++] = (uint8_t) (((double)pixel.orange) * self.powerScale);
             }
             phase = !phase;
         }
@@ -286,9 +290,9 @@ static uint8 sLinearExp[] =
             if (pixel == nil)
                 pixel = [[Pixel alloc] init];
 
-            serializedMsg[i++] = (uint8) (((double)pixel.red) * self.powerScale);
-            serializedMsg[i++] = (uint8) (((double)pixel.green) * self.powerScale);
-            serializedMsg[i++] = (uint8) (((double)pixel.blue) * self.powerScale);
+            serializedMsg[i++] = (uint8_t) (((double)pixel.red) * self.powerScale);
+            serializedMsg[i++] = (uint8_t) (((double)pixel.green) * self.powerScale);
+            serializedMsg[i++] = (uint8_t) (((double)pixel.blue) * self.powerScale);
         }
     }
     _msg = [[NSData alloc] initWithBytes:serializedMsg length:sizeof serializedMsg];

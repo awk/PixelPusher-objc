@@ -8,7 +8,7 @@
 
 #import "Pixel.h"
 
-static uint8 sLinearExp[] =
+static uint8_t sLinearExp[] =
 { 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
     0, 0, 0, 0, 0, 0, 0, 0, 0, 1,
     1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
@@ -47,7 +47,11 @@ static uint8 sLinearExp[] =
     return self;
 }
 
+#ifdef __MAC_OS_X_VERSION_MAX_ALLOWED
 - (id) initWithColor:(NSColor *) color useAntiLog:(BOOL) useAntiLog
+#else
+- (id) initWithColor:(UIColor *) color useAntiLog:(BOOL) useAntiLog
+#endif
 {
     self = [super init];
     if (self) {
@@ -57,16 +61,23 @@ static uint8 sLinearExp[] =
 }
 
 // Processing "color" objects only support the axes of red, green and blue.
+#ifdef __MAC_OS_X_VERSION_MAX_ALLOWED
 - (void) setColor:(NSColor *) color useAntiLog:(BOOL)useAntiLog
+#else
+- (void) setColor:(UIColor *) color useAntiLog:(BOOL)useAntiLog
+#endif
 {
+    CGFloat red, green, blue, alpha;
+    [color getRed:&red green:&green blue:&blue alpha:&alpha];
+    
     if (useAntiLog) {
-        self.blue = sLinearExp[(uint8)(color.blueComponent * 255.0f) & 0xff];
-        self.green = sLinearExp[(uint8)(color.greenComponent * 255.0f) & 0xff];
-        self.red = sLinearExp[(uint8)(color.redComponent * 255.0f) & 0xff];
+        self.blue = sLinearExp[(uint8_t)(blue * 255.0f) & 0xff];
+        self.green = sLinearExp[(uint8_t)(green * 255.0f) & 0xff];
+        self.red = sLinearExp[(uint8_t)(red * 255.0f) & 0xff];
     } else {
-        self.blue = (uint8)(color.blueComponent * 255.0f) & 0xff;
-        self.green = (uint8)(color.greenComponent * 255.0f) & 0xff;
-        self.red = (uint8)(color.redComponent * 255.0f) & 0xff;
+        self.blue = (uint8_t)(blue * 255.0f) & 0xff;
+        self.green = (uint8_t)(green * 255.0f) & 0xff;
+        self.red = (uint8_t)(red * 255.0f) & 0xff;
     }
     self.orange = 0;
     self.white = 0;
