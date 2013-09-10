@@ -1,0 +1,954 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EA382C3117DD42F7001BB9F7 /* Strip.h in Headers */ = {isa = PBXBuildFile; fileRef = EA382C2F17DD42F7001BB9F7 /* Strip.h */; };
+		EA382C3217DD42F7001BB9F7 /* Strip.m in Sources */ = {isa = PBXBuildFile; fileRef = EA382C3017DD42F7001BB9F7 /* Strip.m */; };
+		EA382C3317DD42F7001BB9F7 /* Strip.m in Sources */ = {isa = PBXBuildFile; fileRef = EA382C3017DD42F7001BB9F7 /* Strip.m */; };
+		EA382C3617DD4747001BB9F7 /* Pixel.h in Headers */ = {isa = PBXBuildFile; fileRef = EA382C3417DD4747001BB9F7 /* Pixel.h */; };
+		EA382C3717DD4747001BB9F7 /* Pixel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA382C3517DD4747001BB9F7 /* Pixel.m */; };
+		EA382C3817DD4747001BB9F7 /* Pixel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA382C3517DD4747001BB9F7 /* Pixel.m */; };
+		EA382C3B17DE9D84001BB9F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA382C3A17DE9D84001BB9F7 /* UIKit.framework */; };
+		EA382C3C17DE9D9D001BB9F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA382C3A17DE9D84001BB9F7 /* UIKit.framework */; };
+		EA75E24717DAA50200D7B7FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA75E24617DAA50200D7B7FC /* Foundation.framework */; };
+		EA75E24C17DAA50200D7B7FC /* PixelPusher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA75E24B17DAA50200D7B7FC /* PixelPusher.h */; };
+		EA75E24E17DAA50200D7B7FC /* PixelPusher.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75E24D17DAA50200D7B7FC /* PixelPusher.m */; };
+		EA75E25617DAA50200D7B7FC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA75E25517DAA50200D7B7FC /* SenTestingKit.framework */; };
+		EA75E25917DAA50200D7B7FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA75E24617DAA50200D7B7FC /* Foundation.framework */; };
+		EA75E25C17DAA50200D7B7FC /* libpixelpusher.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA75E24317DAA50200D7B7FC /* libpixelpusher.a */; };
+		EA75E26217DAA50200D7B7FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA75E26017DAA50200D7B7FC /* InfoPlist.strings */; };
+		EA75E26517DAA50200D7B7FC /* pixelpusherTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75E26417DAA50200D7B7FC /* pixelpusherTests.m */; };
+		EA75E27017DAA71F00D7B7FC /* DeviceRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75E26F17DAA71F00D7B7FC /* DeviceRegistry.m */; };
+		EA75E27417DAAD3F00D7B7FC /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75E27317DAAD3F00D7B7FC /* AsyncUdpSocket.m */; };
+		EA75E27B17DB67B700D7B7FC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA75E27A17DB67B700D7B7FC /* Cocoa.framework */; };
+		EA75E28C17DB67B800D7B7FC /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA75E25517DAA50200D7B7FC /* SenTestingKit.framework */; };
+		EA75E28D17DB67B800D7B7FC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA75E27A17DB67B700D7B7FC /* Cocoa.framework */; };
+		EA75E29017DB67B800D7B7FC /* libpixelpusher-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA75E27917DB67B700D7B7FC /* libpixelpusher-osx.a */; };
+		EA75E29617DB67B800D7B7FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA75E29417DB67B800D7B7FC /* InfoPlist.strings */; };
+		EA75E29917DB67B800D7B7FC /* pixelpusher_osxTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75E29817DB67B800D7B7FC /* pixelpusher_osxTests.m */; };
+		EA75E2A517DB687500D7B7FC /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA75E27A17DB67B700D7B7FC /* Cocoa.framework */; };
+		EA75E2AB17DB687600D7B7FC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EA75E2A917DB687600D7B7FC /* InfoPlist.strings */; };
+		EA75E2AD17DB687600D7B7FC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75E2AC17DB687600D7B7FC /* main.m */; };
+		EA75E2B117DB687600D7B7FC /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = EA75E2AF17DB687600D7B7FC /* Credits.rtf */; };
+		EA75E2B417DB687600D7B7FC /* FWAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75E2B317DB687600D7B7FC /* FWAppDelegate.m */; };
+		EA75E2B717DB687600D7B7FC /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = EA75E2B517DB687600D7B7FC /* MainMenu.xib */; };
+		EA75E2D117DB68C700D7B7FC /* libpixelpusher-osx.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EA75E27917DB67B700D7B7FC /* libpixelpusher-osx.a */; };
+		EA75E2D417DB6B1900D7B7FC /* PixelPusher.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75E24D17DAA50200D7B7FC /* PixelPusher.m */; };
+		EA75E2D517DB6B1E00D7B7FC /* DeviceRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75E26F17DAA71F00D7B7FC /* DeviceRegistry.m */; };
+		EA75E2D617DB6B3000D7B7FC /* AsyncUdpSocket.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75E27317DAAD3F00D7B7FC /* AsyncUdpSocket.m */; };
+		EA75E2D917DB902800D7B7FC /* DeviceHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = EA75E2D717DB902800D7B7FC /* DeviceHeader.h */; };
+		EA75E2DA17DB902800D7B7FC /* DeviceHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75E2D817DB902800D7B7FC /* DeviceHeader.m */; };
+		EA75E2DB17DB902800D7B7FC /* DeviceHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75E2D817DB902800D7B7FC /* DeviceHeader.m */; };
+		EA75E2DD17DBA79300D7B7FC /* Device.h in Headers */ = {isa = PBXBuildFile; fileRef = EA75E2DC17DBA79300D7B7FC /* Device.h */; };
+		EA75E2E017DBA8E000D7B7FC /* DeviceImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = EA75E2DE17DBA8E000D7B7FC /* DeviceImpl.h */; };
+		EA75E2E117DBA8E000D7B7FC /* DeviceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75E2DF17DBA8E000D7B7FC /* DeviceImpl.m */; };
+		EA75E2E217DBA8E000D7B7FC /* DeviceImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75E2DF17DBA8E000D7B7FC /* DeviceImpl.m */; };
+		EA75E2E517DCD02900D7B7FC /* PusherGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = EA75E2E317DCD02800D7B7FC /* PusherGroup.h */; };
+		EA75E2E617DCD02900D7B7FC /* PusherGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75E2E417DCD02800D7B7FC /* PusherGroup.m */; };
+		EA75E2E717DCD02900D7B7FC /* PusherGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75E2E417DCD02800D7B7FC /* PusherGroup.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EA75E25A17DAA50200D7B7FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA75E23B17DAA50200D7B7FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA75E24217DAA50200D7B7FC;
+			remoteInfo = pixelpusher;
+		};
+		EA75E28E17DB67B800D7B7FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA75E23B17DAA50200D7B7FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA75E27817DB67B700D7B7FC;
+			remoteInfo = "pixelpusher-osx";
+		};
+		EA75E2D217DB6ABE00D7B7FC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EA75E23B17DAA50200D7B7FC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA75E27817DB67B700D7B7FC;
+			remoteInfo = "pixelpusher-osx";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		EA75E24117DAA50200D7B7FC /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/${PRODUCT_NAME}";
+			dstSubfolderSpec = 16;
+			files = (
+				EA75E24C17DAA50200D7B7FC /* PixelPusher.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		EA382C2F17DD42F7001BB9F7 /* Strip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Strip.h; sourceTree = "<group>"; };
+		EA382C3017DD42F7001BB9F7 /* Strip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Strip.m; sourceTree = "<group>"; };
+		EA382C3417DD4747001BB9F7 /* Pixel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pixel.h; sourceTree = "<group>"; };
+		EA382C3517DD4747001BB9F7 /* Pixel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pixel.m; sourceTree = "<group>"; };
+		EA382C3917DE9AF5001BB9F7 /* pixelpusher-osx-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pixelpusher-osx-Prefix.pch"; sourceTree = "<group>"; };
+		EA382C3A17DE9D84001BB9F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EA75E24317DAA50200D7B7FC /* libpixelpusher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libpixelpusher.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA75E24617DAA50200D7B7FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EA75E24A17DAA50200D7B7FC /* pixelpusher-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pixelpusher-ios-Prefix.pch"; sourceTree = "<group>"; };
+		EA75E24B17DAA50200D7B7FC /* PixelPusher.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PixelPusher.h; sourceTree = "<group>"; };
+		EA75E24D17DAA50200D7B7FC /* PixelPusher.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PixelPusher.m; sourceTree = "<group>"; };
+		EA75E25417DAA50200D7B7FC /* pixelpusherTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pixelpusherTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA75E25517DAA50200D7B7FC /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		EA75E25717DAA50200D7B7FC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		EA75E25F17DAA50200D7B7FC /* pixelpusherTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "pixelpusherTests-Info.plist"; sourceTree = "<group>"; };
+		EA75E26117DAA50200D7B7FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA75E26317DAA50200D7B7FC /* pixelpusherTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pixelpusherTests.h; sourceTree = "<group>"; };
+		EA75E26417DAA50200D7B7FC /* pixelpusherTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pixelpusherTests.m; sourceTree = "<group>"; };
+		EA75E26E17DAA71F00D7B7FC /* DeviceRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceRegistry.h; sourceTree = "<group>"; };
+		EA75E26F17DAA71F00D7B7FC /* DeviceRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceRegistry.m; sourceTree = "<group>"; };
+		EA75E27217DAAD3F00D7B7FC /* AsyncUdpSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AsyncUdpSocket.h; path = CocoaAsyncSocket/RunLoop/AsyncUdpSocket.h; sourceTree = "<group>"; };
+		EA75E27317DAAD3F00D7B7FC /* AsyncUdpSocket.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AsyncUdpSocket.m; path = CocoaAsyncSocket/RunLoop/AsyncUdpSocket.m; sourceTree = "<group>"; };
+		EA75E27917DB67B700D7B7FC /* libpixelpusher-osx.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libpixelpusher-osx.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA75E27A17DB67B700D7B7FC /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		EA75E27D17DB67B700D7B7FC /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		EA75E27E17DB67B700D7B7FC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EA75E27F17DB67B700D7B7FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EA75E28B17DB67B800D7B7FC /* pixelpusher-osxTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "pixelpusher-osxTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA75E29317DB67B800D7B7FC /* pixelpusher-osxTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "pixelpusher-osxTests-Info.plist"; sourceTree = "<group>"; };
+		EA75E29517DB67B800D7B7FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA75E29717DB67B800D7B7FC /* pixelpusher_osxTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = pixelpusher_osxTests.h; sourceTree = "<group>"; };
+		EA75E29817DB67B800D7B7FC /* pixelpusher_osxTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pixelpusher_osxTests.m; sourceTree = "<group>"; };
+		EA75E2A417DB687500D7B7FC /* pixelscene.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pixelscene.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA75E2A817DB687600D7B7FC /* pixelscene-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "pixelscene-Info.plist"; sourceTree = "<group>"; };
+		EA75E2AA17DB687600D7B7FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EA75E2AC17DB687600D7B7FC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		EA75E2AE17DB687600D7B7FC /* pixelscene-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pixelscene-Prefix.pch"; sourceTree = "<group>"; };
+		EA75E2B017DB687600D7B7FC /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		EA75E2B217DB687600D7B7FC /* FWAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FWAppDelegate.h; sourceTree = "<group>"; };
+		EA75E2B317DB687600D7B7FC /* FWAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FWAppDelegate.m; sourceTree = "<group>"; };
+		EA75E2B617DB687600D7B7FC /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		EA75E2D717DB902800D7B7FC /* DeviceHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceHeader.h; sourceTree = "<group>"; };
+		EA75E2D817DB902800D7B7FC /* DeviceHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceHeader.m; sourceTree = "<group>"; };
+		EA75E2DC17DBA79300D7B7FC /* Device.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Device.h; sourceTree = "<group>"; };
+		EA75E2DE17DBA8E000D7B7FC /* DeviceImpl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceImpl.h; sourceTree = "<group>"; };
+		EA75E2DF17DBA8E000D7B7FC /* DeviceImpl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceImpl.m; sourceTree = "<group>"; };
+		EA75E2E317DCD02800D7B7FC /* PusherGroup.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PusherGroup.h; sourceTree = "<group>"; };
+		EA75E2E417DCD02800D7B7FC /* PusherGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PusherGroup.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EA75E24017DAA50200D7B7FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA382C3C17DE9D9D001BB9F7 /* UIKit.framework in Frameworks */,
+				EA75E24717DAA50200D7B7FC /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA75E25017DAA50200D7B7FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA382C3B17DE9D84001BB9F7 /* UIKit.framework in Frameworks */,
+				EA75E25617DAA50200D7B7FC /* SenTestingKit.framework in Frameworks */,
+				EA75E25917DAA50200D7B7FC /* Foundation.framework in Frameworks */,
+				EA75E25C17DAA50200D7B7FC /* libpixelpusher.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA75E27617DB67B700D7B7FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA75E27B17DB67B700D7B7FC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA75E28717DB67B800D7B7FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA75E28C17DB67B800D7B7FC /* SenTestingKit.framework in Frameworks */,
+				EA75E28D17DB67B800D7B7FC /* Cocoa.framework in Frameworks */,
+				EA75E29017DB67B800D7B7FC /* libpixelpusher-osx.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA75E2A117DB687500D7B7FC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA75E2D117DB68C700D7B7FC /* libpixelpusher-osx.a in Frameworks */,
+				EA75E2A517DB687500D7B7FC /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EA75E23A17DAA50200D7B7FC = {
+			isa = PBXGroup;
+			children = (
+				EA382C3A17DE9D84001BB9F7 /* UIKit.framework */,
+				EA75E27117DAAD2E00D7B7FC /* CocoaAsyncSocket */,
+				EA75E24817DAA50200D7B7FC /* pixelpusher */,
+				EA75E25D17DAA50200D7B7FC /* pixelpusherTests */,
+				EA75E29117DB67B800D7B7FC /* pixelpusher-osxTests */,
+				EA75E2A617DB687500D7B7FC /* pixelscene */,
+				EA75E24517DAA50200D7B7FC /* Frameworks */,
+				EA75E24417DAA50200D7B7FC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EA75E24417DAA50200D7B7FC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EA75E24317DAA50200D7B7FC /* libpixelpusher.a */,
+				EA75E25417DAA50200D7B7FC /* pixelpusherTests.octest */,
+				EA75E27917DB67B700D7B7FC /* libpixelpusher-osx.a */,
+				EA75E28B17DB67B800D7B7FC /* pixelpusher-osxTests.octest */,
+				EA75E2A417DB687500D7B7FC /* pixelscene.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EA75E24517DAA50200D7B7FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA75E24617DAA50200D7B7FC /* Foundation.framework */,
+				EA75E25517DAA50200D7B7FC /* SenTestingKit.framework */,
+				EA75E25717DAA50200D7B7FC /* UIKit.framework */,
+				EA75E27A17DB67B700D7B7FC /* Cocoa.framework */,
+				EA75E27C17DB67B700D7B7FC /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EA75E24817DAA50200D7B7FC /* pixelpusher */ = {
+			isa = PBXGroup;
+			children = (
+				EA75E24B17DAA50200D7B7FC /* PixelPusher.h */,
+				EA75E24D17DAA50200D7B7FC /* PixelPusher.m */,
+				EA75E24917DAA50200D7B7FC /* Supporting Files */,
+				EA75E26E17DAA71F00D7B7FC /* DeviceRegistry.h */,
+				EA75E26F17DAA71F00D7B7FC /* DeviceRegistry.m */,
+				EA75E2D717DB902800D7B7FC /* DeviceHeader.h */,
+				EA75E2D817DB902800D7B7FC /* DeviceHeader.m */,
+				EA75E2DC17DBA79300D7B7FC /* Device.h */,
+				EA75E2DE17DBA8E000D7B7FC /* DeviceImpl.h */,
+				EA75E2DF17DBA8E000D7B7FC /* DeviceImpl.m */,
+				EA75E2E317DCD02800D7B7FC /* PusherGroup.h */,
+				EA75E2E417DCD02800D7B7FC /* PusherGroup.m */,
+				EA382C2F17DD42F7001BB9F7 /* Strip.h */,
+				EA382C3017DD42F7001BB9F7 /* Strip.m */,
+				EA382C3417DD4747001BB9F7 /* Pixel.h */,
+				EA382C3517DD4747001BB9F7 /* Pixel.m */,
+			);
+			path = pixelpusher;
+			sourceTree = "<group>";
+		};
+		EA75E24917DAA50200D7B7FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA382C3917DE9AF5001BB9F7 /* pixelpusher-osx-Prefix.pch */,
+				EA75E24A17DAA50200D7B7FC /* pixelpusher-ios-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA75E25D17DAA50200D7B7FC /* pixelpusherTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA75E26317DAA50200D7B7FC /* pixelpusherTests.h */,
+				EA75E26417DAA50200D7B7FC /* pixelpusherTests.m */,
+				EA75E25E17DAA50200D7B7FC /* Supporting Files */,
+			);
+			path = pixelpusherTests;
+			sourceTree = "<group>";
+		};
+		EA75E25E17DAA50200D7B7FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA75E25F17DAA50200D7B7FC /* pixelpusherTests-Info.plist */,
+				EA75E26017DAA50200D7B7FC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA75E27117DAAD2E00D7B7FC /* CocoaAsyncSocket */ = {
+			isa = PBXGroup;
+			children = (
+				EA75E27217DAAD3F00D7B7FC /* AsyncUdpSocket.h */,
+				EA75E27317DAAD3F00D7B7FC /* AsyncUdpSocket.m */,
+			);
+			name = CocoaAsyncSocket;
+			sourceTree = "<group>";
+		};
+		EA75E27C17DB67B700D7B7FC /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EA75E27D17DB67B700D7B7FC /* AppKit.framework */,
+				EA75E27E17DB67B700D7B7FC /* CoreData.framework */,
+				EA75E27F17DB67B700D7B7FC /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		EA75E29117DB67B800D7B7FC /* pixelpusher-osxTests */ = {
+			isa = PBXGroup;
+			children = (
+				EA75E29717DB67B800D7B7FC /* pixelpusher_osxTests.h */,
+				EA75E29817DB67B800D7B7FC /* pixelpusher_osxTests.m */,
+				EA75E29217DB67B800D7B7FC /* Supporting Files */,
+			);
+			path = "pixelpusher-osxTests";
+			sourceTree = "<group>";
+		};
+		EA75E29217DB67B800D7B7FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA75E29317DB67B800D7B7FC /* pixelpusher-osxTests-Info.plist */,
+				EA75E29417DB67B800D7B7FC /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EA75E2A617DB687500D7B7FC /* pixelscene */ = {
+			isa = PBXGroup;
+			children = (
+				EA75E2B217DB687600D7B7FC /* FWAppDelegate.h */,
+				EA75E2B317DB687600D7B7FC /* FWAppDelegate.m */,
+				EA75E2B517DB687600D7B7FC /* MainMenu.xib */,
+				EA75E2A717DB687600D7B7FC /* Supporting Files */,
+			);
+			path = pixelscene;
+			sourceTree = "<group>";
+		};
+		EA75E2A717DB687600D7B7FC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EA75E2A817DB687600D7B7FC /* pixelscene-Info.plist */,
+				EA75E2A917DB687600D7B7FC /* InfoPlist.strings */,
+				EA75E2AC17DB687600D7B7FC /* main.m */,
+				EA75E2AE17DB687600D7B7FC /* pixelscene-Prefix.pch */,
+				EA75E2AF17DB687600D7B7FC /* Credits.rtf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		EA75E27717DB67B700D7B7FC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA75E2D917DB902800D7B7FC /* DeviceHeader.h in Headers */,
+				EA75E2DD17DBA79300D7B7FC /* Device.h in Headers */,
+				EA75E2E017DBA8E000D7B7FC /* DeviceImpl.h in Headers */,
+				EA75E2E517DCD02900D7B7FC /* PusherGroup.h in Headers */,
+				EA382C3117DD42F7001BB9F7 /* Strip.h in Headers */,
+				EA382C3617DD4747001BB9F7 /* Pixel.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		EA75E24217DAA50200D7B7FC /* pixelpusher */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA75E26817DAA50200D7B7FC /* Build configuration list for PBXNativeTarget "pixelpusher" */;
+			buildPhases = (
+				EA75E23F17DAA50200D7B7FC /* Sources */,
+				EA75E24017DAA50200D7B7FC /* Frameworks */,
+				EA75E24117DAA50200D7B7FC /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = pixelpusher;
+			productName = pixelpusher;
+			productReference = EA75E24317DAA50200D7B7FC /* libpixelpusher.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EA75E25317DAA50200D7B7FC /* pixelpusherTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA75E26B17DAA50200D7B7FC /* Build configuration list for PBXNativeTarget "pixelpusherTests" */;
+			buildPhases = (
+				EA75E24F17DAA50200D7B7FC /* Sources */,
+				EA75E25017DAA50200D7B7FC /* Frameworks */,
+				EA75E25117DAA50200D7B7FC /* Resources */,
+				EA75E25217DAA50200D7B7FC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA75E25B17DAA50200D7B7FC /* PBXTargetDependency */,
+			);
+			name = pixelpusherTests;
+			productName = pixelpusherTests;
+			productReference = EA75E25417DAA50200D7B7FC /* pixelpusherTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		EA75E27817DB67B700D7B7FC /* pixelpusher-osx */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA75E29A17DB67B800D7B7FC /* Build configuration list for PBXNativeTarget "pixelpusher-osx" */;
+			buildPhases = (
+				EA75E27517DB67B700D7B7FC /* Sources */,
+				EA75E27617DB67B700D7B7FC /* Frameworks */,
+				EA75E27717DB67B700D7B7FC /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "pixelpusher-osx";
+			productName = "pixelpusher-osx";
+			productReference = EA75E27917DB67B700D7B7FC /* libpixelpusher-osx.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		EA75E28A17DB67B800D7B7FC /* pixelpusher-osxTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA75E29D17DB67B800D7B7FC /* Build configuration list for PBXNativeTarget "pixelpusher-osxTests" */;
+			buildPhases = (
+				EA75E28617DB67B800D7B7FC /* Sources */,
+				EA75E28717DB67B800D7B7FC /* Frameworks */,
+				EA75E28817DB67B800D7B7FC /* Resources */,
+				EA75E28917DB67B800D7B7FC /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA75E28F17DB67B800D7B7FC /* PBXTargetDependency */,
+			);
+			name = "pixelpusher-osxTests";
+			productName = "pixelpusher-osxTests";
+			productReference = EA75E28B17DB67B800D7B7FC /* pixelpusher-osxTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+		EA75E2A317DB687500D7B7FC /* pixelscene */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA75E2CB17DB687600D7B7FC /* Build configuration list for PBXNativeTarget "pixelscene" */;
+			buildPhases = (
+				EA75E2A017DB687500D7B7FC /* Sources */,
+				EA75E2A117DB687500D7B7FC /* Frameworks */,
+				EA75E2A217DB687500D7B7FC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EA75E2D317DB6ABE00D7B7FC /* PBXTargetDependency */,
+			);
+			name = pixelscene;
+			productName = pixelscene;
+			productReference = EA75E2A417DB687500D7B7FC /* pixelscene.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EA75E23B17DAA50200D7B7FC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0460;
+				ORGANIZATIONNAME = "Andrew Kimpton";
+			};
+			buildConfigurationList = EA75E23E17DAA50200D7B7FC /* Build configuration list for PBXProject "pixelpusher" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EA75E23A17DAA50200D7B7FC;
+			productRefGroup = EA75E24417DAA50200D7B7FC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EA75E24217DAA50200D7B7FC /* pixelpusher */,
+				EA75E25317DAA50200D7B7FC /* pixelpusherTests */,
+				EA75E27817DB67B700D7B7FC /* pixelpusher-osx */,
+				EA75E28A17DB67B800D7B7FC /* pixelpusher-osxTests */,
+				EA75E2A317DB687500D7B7FC /* pixelscene */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EA75E25117DAA50200D7B7FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA75E26217DAA50200D7B7FC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA75E28817DB67B800D7B7FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA75E29617DB67B800D7B7FC /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA75E2A217DB687500D7B7FC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA75E2AB17DB687600D7B7FC /* InfoPlist.strings in Resources */,
+				EA75E2B117DB687600D7B7FC /* Credits.rtf in Resources */,
+				EA75E2B717DB687600D7B7FC /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EA75E25217DAA50200D7B7FC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+		EA75E28917DB67B800D7B7FC /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EA75E23F17DAA50200D7B7FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA75E24E17DAA50200D7B7FC /* PixelPusher.m in Sources */,
+				EA75E27017DAA71F00D7B7FC /* DeviceRegistry.m in Sources */,
+				EA75E27417DAAD3F00D7B7FC /* AsyncUdpSocket.m in Sources */,
+				EA75E2DA17DB902800D7B7FC /* DeviceHeader.m in Sources */,
+				EA75E2E117DBA8E000D7B7FC /* DeviceImpl.m in Sources */,
+				EA75E2E617DCD02900D7B7FC /* PusherGroup.m in Sources */,
+				EA382C3217DD42F7001BB9F7 /* Strip.m in Sources */,
+				EA382C3717DD4747001BB9F7 /* Pixel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA75E24F17DAA50200D7B7FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA75E26517DAA50200D7B7FC /* pixelpusherTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA75E27517DB67B700D7B7FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA75E2D417DB6B1900D7B7FC /* PixelPusher.m in Sources */,
+				EA75E2D517DB6B1E00D7B7FC /* DeviceRegistry.m in Sources */,
+				EA75E2D617DB6B3000D7B7FC /* AsyncUdpSocket.m in Sources */,
+				EA75E2DB17DB902800D7B7FC /* DeviceHeader.m in Sources */,
+				EA75E2E217DBA8E000D7B7FC /* DeviceImpl.m in Sources */,
+				EA75E2E717DCD02900D7B7FC /* PusherGroup.m in Sources */,
+				EA382C3317DD42F7001BB9F7 /* Strip.m in Sources */,
+				EA382C3817DD4747001BB9F7 /* Pixel.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA75E28617DB67B800D7B7FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA75E29917DB67B800D7B7FC /* pixelpusher_osxTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA75E2A017DB687500D7B7FC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA75E2AD17DB687600D7B7FC /* main.m in Sources */,
+				EA75E2B417DB687600D7B7FC /* FWAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EA75E25B17DAA50200D7B7FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA75E24217DAA50200D7B7FC /* pixelpusher */;
+			targetProxy = EA75E25A17DAA50200D7B7FC /* PBXContainerItemProxy */;
+		};
+		EA75E28F17DB67B800D7B7FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA75E27817DB67B700D7B7FC /* pixelpusher-osx */;
+			targetProxy = EA75E28E17DB67B800D7B7FC /* PBXContainerItemProxy */;
+		};
+		EA75E2D317DB6ABE00D7B7FC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA75E27817DB67B700D7B7FC /* pixelpusher-osx */;
+			targetProxy = EA75E2D217DB6ABE00D7B7FC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EA75E26017DAA50200D7B7FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA75E26117DAA50200D7B7FC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EA75E29417DB67B800D7B7FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA75E29517DB67B800D7B7FC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EA75E2A917DB687600D7B7FC /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA75E2AA17DB687600D7B7FC /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		EA75E2AF17DB687600D7B7FC /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA75E2B017DB687600D7B7FC /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		EA75E2B517DB687600D7B7FC /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA75E2B617DB687600D7B7FC /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EA75E26617DAA50200D7B7FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		EA75E26717DAA50200D7B7FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EA75E26917DAA50200D7B7FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/pixelpusher.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pixelpusher/pixelpusher-ios-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		EA75E26A17DAA50200D7B7FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DSTROOT = /tmp/pixelpusher.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pixelpusher/pixelpusher-ios-Prefix.pch";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		EA75E26C17DAA50200D7B7FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pixelpusher/pixelpusher-ios-Prefix.pch";
+				INFOPLIST_FILE = "pixelpusherTests/pixelpusherTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		EA75E26D17DAA50200D7B7FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"\"$(SDKROOT)/Developer/Library/Frameworks\"",
+					"\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pixelpusher/pixelpusher-ios-Prefix.pch";
+				INFOPLIST_FILE = "pixelpusherTests/pixelpusherTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		EA75E29B17DB67B800D7B7FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pixelpusher/pixelpusher-osx-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EA75E29C17DB67B800D7B7FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pixelpusher/pixelpusher-osx-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EA75E29E17DB67B800D7B7FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pixelpusher/pixelpusher-osx-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "pixelpusher-osxTests/pixelpusher-osxTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		EA75E29F17DB67B800D7B7FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = "\"$(DEVELOPER_LIBRARY_DIR)/Frameworks\"";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pixelpusher/pixelpusher-osx-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "pixelpusher-osxTests/pixelpusher-osxTests-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		EA75E2CC17DB687600D7B7FC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pixelscene/pixelscene-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "pixelscene/pixelscene-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		EA75E2CD17DB687600D7B7FC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "pixelscene/pixelscene-Prefix.pch";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				INFOPLIST_FILE = "pixelscene/pixelscene-Info.plist";
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EA75E23E17DAA50200D7B7FC /* Build configuration list for PBXProject "pixelpusher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA75E26617DAA50200D7B7FC /* Debug */,
+				EA75E26717DAA50200D7B7FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA75E26817DAA50200D7B7FC /* Build configuration list for PBXNativeTarget "pixelpusher" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA75E26917DAA50200D7B7FC /* Debug */,
+				EA75E26A17DAA50200D7B7FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA75E26B17DAA50200D7B7FC /* Build configuration list for PBXNativeTarget "pixelpusherTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA75E26C17DAA50200D7B7FC /* Debug */,
+				EA75E26D17DAA50200D7B7FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA75E29A17DB67B800D7B7FC /* Build configuration list for PBXNativeTarget "pixelpusher-osx" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA75E29B17DB67B800D7B7FC /* Debug */,
+				EA75E29C17DB67B800D7B7FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA75E29D17DB67B800D7B7FC /* Build configuration list for PBXNativeTarget "pixelpusher-osxTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA75E29E17DB67B800D7B7FC /* Debug */,
+				EA75E29F17DB67B800D7B7FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EA75E2CB17DB687600D7B7FC /* Build configuration list for PBXNativeTarget "pixelscene" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA75E2CC17DB687600D7B7FC /* Debug */,
+				EA75E2CD17DB687600D7B7FC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EA75E23B17DAA50200D7B7FC /* Project object */;
+}
