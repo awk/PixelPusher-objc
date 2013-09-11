@@ -70,7 +70,14 @@ NSData *sampleData;
 - (void) testDeviceRegistry {
     DeviceRegistry *aDeviceRegistry = [[DeviceRegistry alloc] init];
     
-    [aDeviceRegistry addObserver:self forKeyPath:@"pushers" options:0 context:nil];
+    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+    NSOperationQueue *mainQueue = [NSOperationQueue mainQueue];
+    [center addObserverForName:REGISTRY_PUSHERS_CHANGED object:aDeviceRegistry
+                         queue:mainQueue
+                    usingBlock:^(NSNotification *note)
+     {
+         _notificationCount++;
+     }];
     
     [aDeviceRegistry receive:sampleData];
     STAssertEquals([aDeviceRegistry.pusherMap count], (NSUInteger) 1, @"One PixelPusher Detected");
@@ -79,13 +86,6 @@ NSData *sampleData;
     STAssertEquals([aDeviceRegistry.pusherMap count], (NSUInteger) 1, @"Still One PixelPusher Detected");
     
     STAssertEquals(_notificationCount, (NSInteger) 1, @"Single notification of new pusher");
-}
-
-- (void)observeValueForKeyPath:(NSString *)keyPath
-                      ofObject:(id)object
-                        change:(NSDictionary *)change
-                       context:(void *)context {
-    _notificationCount++;
 }
 
 @end

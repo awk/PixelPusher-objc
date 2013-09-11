@@ -10,7 +10,7 @@
 
 @class Pixel;
 
-extern NSString *REGISTRY_PUSHERS_VALUE_KEY;
+extern NSString *REGISTRY_PUSHERS_CHANGED;
 
 @interface DeviceRegistry : NSObject
 

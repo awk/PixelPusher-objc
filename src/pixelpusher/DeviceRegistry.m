@@ -18,7 +18,7 @@ const NSInteger DISCOVERY_PORT = 7331;
 const NSInteger SOCKET_RECV_TIMEOUT = -1;
 const NSInteger DISCOVERT_SOCKET_TAG = 0x01;
 
-NSString *REGISTRY_PUSHERS_VALUE_KEY = @"pushers";
+NSString *REGISTRY_PUSHERS_CHANGED = @"pushers_changed";
 
 @interface DiscoveryListenerThread : NSThread {
     DeviceRegistry *_deviceRegistry;
@@ -141,15 +141,13 @@ NSString *REGISTRY_PUSHERS_VALUE_KEY = @"pushers";
 
 - (void) updatePusherWithMacAddr:(NSString *) macAddr andDevice:(PixelPusher*) device
 {
-    // We already knew about this device at the given MAC, but its details
-    // have changed
-    [self willChangeValueForKey:REGISTRY_PUSHERS_VALUE_KEY];
     if (_logEnabled) {
         NSLog(@"Device changed: %@", macAddr);
     }
     [[_pusherMap valueForKey:macAddr] copyHeader:device];
-    
-    [self didChangeValueForKey:REGISTRY_PUSHERS_VALUE_KEY];
+
+    // We already knew about this device at the given MAC, but its details have changed
+    [[NSNotificationCenter defaultCenter] postNotificationName:REGISTRY_PUSHERS_CHANGED object:self];
 }
 
 - (void) setStripValuesWithMacAddr:(NSString *) macAddress stripNumber:(NSInteger) stripNumber pixels:(Pixel*) pixels
@@ -168,8 +166,6 @@ NSString *REGISTRY_PUSHERS_VALUE_KEY = @"pushers";
 
 - (void) addNewPusherWithMacAddr:(NSString *)macAddr andDevice:(PixelPusher*)pusher
 {
-    [self willChangeValueForKey:REGISTRY_PUSHERS_VALUE_KEY];
-    
     if (_logEnabled) {
         NSLog(@"New device: %@ has group ordinal %d", macAddr, pusher.groupOrdinal);
     }
@@ -201,19 +197,7 @@ NSString *REGISTRY_PUSHERS_VALUE_KEY = @"pushers";
     if (_logEnabled) {
         NSLog(@"Notifying observers");
     }
-    [self didChangeValueForKey:REGISTRY_PUSHERS_VALUE_KEY];
-}
-
-+ (BOOL)automaticallyNotifiesObserversForKey:(NSString *)theKey {
-    
-    BOOL automatic = NO;
-    if ([theKey isEqualToString:REGISTRY_PUSHERS_VALUE_KEY]) {
-        automatic = NO;
-    }
-    else {
-        automatic = [super automaticallyNotifiesObserversForKey:theKey];
-    }
-    return automatic;
+    [[NSNotificationCenter defaultCenter] postNotificationName:REGISTRY_PUSHERS_CHANGED object:self];
 }
 
 @end
