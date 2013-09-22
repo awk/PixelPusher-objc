@@ -124,7 +124,7 @@ static uint8_t sLinearExp[] =
 
 - /*synchronized*/ (void) setPixels:(NSArray *) pixels
 {
-    self.pixels = [NSArray arrayWithArray:[pixels objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [self.pixels count])]]];
+    self.pixels = [NSMutableArray arrayWithArray:[pixels objectsAtIndexes:[NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, [self.pixels count])]]];
     self.touched = YES;
     [_pusher markTouched];
 }
@@ -293,6 +293,7 @@ static uint8_t sLinearExp[] =
         }
     }
     _msg = [[NSData alloc] initWithBytes:serializedMsg length:[self.pixels count] * 3];
+    free(serializedMsg);
     return _msg;
 }
 
