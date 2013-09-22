@@ -15,6 +15,12 @@
 		EA382C3817DD4747001BB9F7 /* Pixel.m in Sources */ = {isa = PBXBuildFile; fileRef = EA382C3517DD4747001BB9F7 /* Pixel.m */; };
 		EA382C3B17DE9D84001BB9F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA382C3A17DE9D84001BB9F7 /* UIKit.framework */; };
 		EA382C3C17DE9D9D001BB9F7 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA382C3A17DE9D84001BB9F7 /* UIKit.framework */; };
+		EA382C3F17E4B4A5001BB9F7 /* SceneThread.h in Headers */ = {isa = PBXBuildFile; fileRef = EA382C3D17E4B4A5001BB9F7 /* SceneThread.h */; };
+		EA382C4017E4B4A5001BB9F7 /* SceneThread.m in Sources */ = {isa = PBXBuildFile; fileRef = EA382C3E17E4B4A5001BB9F7 /* SceneThread.m */; };
+		EA382C4117E4B4A5001BB9F7 /* SceneThread.m in Sources */ = {isa = PBXBuildFile; fileRef = EA382C3E17E4B4A5001BB9F7 /* SceneThread.m */; };
+		EA382C4417E4BE19001BB9F7 /* CardThread.h in Headers */ = {isa = PBXBuildFile; fileRef = EA382C4217E4BE19001BB9F7 /* CardThread.h */; };
+		EA382C4517E4BE19001BB9F7 /* CardThread.m in Sources */ = {isa = PBXBuildFile; fileRef = EA382C4317E4BE19001BB9F7 /* CardThread.m */; };
+		EA382C4617E4BE19001BB9F7 /* CardThread.m in Sources */ = {isa = PBXBuildFile; fileRef = EA382C4317E4BE19001BB9F7 /* CardThread.m */; };
 		EA75E24717DAA50200D7B7FC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA75E24617DAA50200D7B7FC /* Foundation.framework */; };
 		EA75E24C17DAA50200D7B7FC /* PixelPusher.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = EA75E24B17DAA50200D7B7FC /* PixelPusher.h */; };
 		EA75E24E17DAA50200D7B7FC /* PixelPusher.m in Sources */ = {isa = PBXBuildFile; fileRef = EA75E24D17DAA50200D7B7FC /* PixelPusher.m */; };
@@ -97,6 +103,10 @@
 		EA382C3517DD4747001BB9F7 /* Pixel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Pixel.m; sourceTree = "<group>"; };
 		EA382C3917DE9AF5001BB9F7 /* pixelpusher-osx-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pixelpusher-osx-Prefix.pch"; sourceTree = "<group>"; };
 		EA382C3A17DE9D84001BB9F7 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		EA382C3D17E4B4A5001BB9F7 /* SceneThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneThread.h; sourceTree = "<group>"; };
+		EA382C3E17E4B4A5001BB9F7 /* SceneThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SceneThread.m; sourceTree = "<group>"; };
+		EA382C4217E4BE19001BB9F7 /* CardThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CardThread.h; sourceTree = "<group>"; };
+		EA382C4317E4BE19001BB9F7 /* CardThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CardThread.m; sourceTree = "<group>"; };
 		EA75E24317DAA50200D7B7FC /* libpixelpusher.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libpixelpusher.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA75E24617DAA50200D7B7FC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		EA75E24A17DAA50200D7B7FC /* pixelpusher-ios-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "pixelpusher-ios-Prefix.pch"; sourceTree = "<group>"; };
@@ -249,6 +259,10 @@
 				EA382C3017DD42F7001BB9F7 /* Strip.m */,
 				EA382C3417DD4747001BB9F7 /* Pixel.h */,
 				EA382C3517DD4747001BB9F7 /* Pixel.m */,
+				EA382C3D17E4B4A5001BB9F7 /* SceneThread.h */,
+				EA382C3E17E4B4A5001BB9F7 /* SceneThread.m */,
+				EA382C4217E4BE19001BB9F7 /* CardThread.h */,
+				EA382C4317E4BE19001BB9F7 /* CardThread.m */,
 			);
 			path = pixelpusher;
 			sourceTree = "<group>";
@@ -355,6 +369,8 @@
 				EA75E2E517DCD02900D7B7FC /* PusherGroup.h in Headers */,
 				EA382C3117DD42F7001BB9F7 /* Strip.h in Headers */,
 				EA382C3617DD4747001BB9F7 /* Pixel.h in Headers */,
+				EA382C3F17E4B4A5001BB9F7 /* SceneThread.h in Headers */,
+				EA382C4417E4BE19001BB9F7 /* CardThread.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -552,6 +568,8 @@
 				EA75E2E617DCD02900D7B7FC /* PusherGroup.m in Sources */,
 				EA382C3217DD42F7001BB9F7 /* Strip.m in Sources */,
 				EA382C3717DD4747001BB9F7 /* Pixel.m in Sources */,
+				EA382C4017E4B4A5001BB9F7 /* SceneThread.m in Sources */,
+				EA382C4517E4BE19001BB9F7 /* CardThread.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -575,6 +593,8 @@
 				EA75E2E717DCD02900D7B7FC /* PusherGroup.m in Sources */,
 				EA382C3317DD42F7001BB9F7 /* Strip.m in Sources */,
 				EA382C3817DD4747001BB9F7 /* Pixel.m in Sources */,
+				EA382C4117E4B4A5001BB9F7 /* SceneThread.m in Sources */,
+				EA382C4617E4BE19001BB9F7 /* CardThread.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

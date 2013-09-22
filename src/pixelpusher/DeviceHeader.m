@@ -51,12 +51,7 @@ const NSInteger headerLength = 24;
         memcpy(headerPkt, [packet bytes], headerLength);
 
         self.macAddress = [NSData dataWithBytes:headerPkt length:6];
-//        try {
-//            this.IpAddress = InetAddress.getByAddress(Arrays.copyOfRange(headerPkt,
-//                                                                         6, 10));
-//        } catch (UnknownHostException e) {
-//            throw new IllegalArgumentException();
-//        }
+        self.ipAddress = *((uint32_t*) &headerPkt[6]);
         self.deviceType = headerPkt[10];
         self.protocolVersion = headerPkt[11];
         self.vendorId = *((uint16_t*) &headerPkt[12]);
@@ -91,6 +86,8 @@ const NSInteger headerLength = 24;
 
 - (NSString *) ipAddressAsString
 {
-    return @"Unset IP Address";
+    uint8_t *addressBytes = (uint8_t *) &_ipAddress;
+    
+    return [NSString stringWithFormat:@"%d.%d.%d.%d", addressBytes[0], addressBytes[1], addressBytes[2], addressBytes[3]];
 }
 @end

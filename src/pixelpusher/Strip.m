@@ -14,10 +14,7 @@
 
 @property (nonatomic, retain) NSMutableArray *pixels;
 @property (nonatomic, retain) PixelPusher *pusher;
-@property BOOL touched;
-@property double powerScale;
 @property NSData *msg;
-@property (nonatomic, readonly) NSUInteger length;
 @end
 
 static uint8_t sLinearExp[] =
@@ -56,7 +53,7 @@ static uint8_t sLinearExp[] =
         _stripNumber = stripNumber;
 
         _pixels = [[NSMutableArray alloc] initWithCapacity:length * 3];
-        for (int i = 0; i < [self.pixels count]; i++) {
+        for (int i = 0; i < length; i++) {
             [self.pixels addObject:[[Pixel alloc] init]];
         }
         _pusher = device;
@@ -211,10 +208,10 @@ static uint8_t sLinearExp[] =
     [_pusher markTouched];
 }
 
-#ifdef __MAC_OS_X_VERSION_MAX_ALLOWED
-- /*synchronized*/ (void) setPixelColor:(NSColor *) color atPosition:(int) position
-#else
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 - /*synchronized*/ (void) setPixelColor:(UIColor *) color atPosition:(int) position
+#else
+- /*synchronized*/ (void) setPixelColor:(NSColor *) color atPosition:(int) position
 #endif
 {
     if (position >= [self.pixels count]) {
@@ -295,7 +292,7 @@ static uint8_t sLinearExp[] =
             serializedMsg[i++] = (uint8_t) (((double)pixel.blue) * self.powerScale);
         }
     }
-    _msg = [[NSData alloc] initWithBytes:serializedMsg length:sizeof serializedMsg];
+    _msg = [[NSData alloc] initWithBytes:serializedMsg length:[self.pixels count] * 3];
     return _msg;
 }
 

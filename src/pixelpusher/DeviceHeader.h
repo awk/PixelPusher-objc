@@ -23,6 +23,7 @@ typedef enum {
 - (NSString *) ipAddressAsString;
 
 @property (nonatomic, retain) NSData *macAddress;
+@property uint32_t ipAddress;
 @property DeviceType deviceType;
 @property NSInteger protocolVersion;
 @property NSInteger vendorId;
@@ -31,7 +32,5 @@ typedef enum {
 @property NSInteger softwareRevision;
 @property NSInteger linkSpeed;
 @property (nonatomic, retain) NSData *packetRemainder;
-
-//public InetAddress IpAddress;
 
 @end

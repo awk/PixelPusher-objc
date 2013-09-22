@@ -10,6 +10,8 @@
 
 @class Pixel;
 
+extern NSString *REGISTRY_PUSHERS_ADDED;
+extern NSString *REGISTRY_PUSHERS_REMOVED;
 extern NSString *REGISTRY_PUSHERS_CHANGED;
 
 @interface DeviceRegistry : NSObject
@@ -24,5 +26,9 @@ extern NSString *REGISTRY_PUSHERS_CHANGED;
 - (void) receive:(NSData *) data;
 
 @property (nonatomic, readonly) NSDictionary* pusherMap;
+@property (nonatomic) BOOL autoThrottle;
+@property (nonatomic) NSInteger extraDelay;
+@property (nonatomic) double powerScale;
+@property (nonatomic) NSInteger frameLimit;
 
 @end

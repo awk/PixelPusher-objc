@@ -14,7 +14,7 @@
 
 - (NSString *) getMacAddress;
 
-//InetAddress getIp();
+- (NSString *) getIp;
 
 - (DeviceType) getDeviceType;
 

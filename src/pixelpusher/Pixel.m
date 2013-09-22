@@ -47,10 +47,10 @@ static uint8_t sLinearExp[] =
     return self;
 }
 
-#ifdef __MAC_OS_X_VERSION_MAX_ALLOWED
-- (id) initWithColor:(NSColor *) color useAntiLog:(BOOL) useAntiLog
-#else
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 - (id) initWithColor:(UIColor *) color useAntiLog:(BOOL) useAntiLog
+#else
+- (id) initWithColor:(NSColor *) color useAntiLog:(BOOL) useAntiLog
 #endif
 {
     self = [super init];
@@ -61,10 +61,10 @@ static uint8_t sLinearExp[] =
 }
 
 // Processing "color" objects only support the axes of red, green and blue.
-#ifdef __MAC_OS_X_VERSION_MAX_ALLOWED
-- (void) setColor:(NSColor *) color useAntiLog:(BOOL)useAntiLog
-#else
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 - (void) setColor:(UIColor *) color useAntiLog:(BOOL)useAntiLog
+#else
+- (void) setColor:(NSColor *) color useAntiLog:(BOOL)useAntiLog
 #endif
 {
     CGFloat red, green, blue, alpha;

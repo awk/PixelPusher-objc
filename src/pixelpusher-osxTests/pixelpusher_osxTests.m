@@ -52,8 +52,7 @@ NSData *sampleData;
         0xff, 0xff, 0xff };
     NSData *headerData = [NSData dataWithBytes:headerPacket length:sizeof headerPacket];
     DeviceHeader *deviceHeader = [[DeviceHeader alloc] initWithData:headerData];
-    // IP Address should equal 10.73.38.166 - but IP Address support not present in DeviceHeader yet.
-    STAssertTrue([deviceHeader.description isEqualToString:@"PIXELPUSHER: MAC(00:02:f7:f0:c0:99), IP(Unset IP Address), Protocol Ver(1), Vendor ID(2), Product ID(1), HW Rev(2), SW Rev(3), Link Spd(100000000)"], @"Device Header parsed correctly");
+    STAssertTrue([deviceHeader.description isEqualToString:@"PIXELPUSHER: MAC(00:02:f7:f0:c0:99), IP(10.73.38.166), Protocol Ver(1), Vendor ID(2), Product ID(1), HW Rev(2), SW Rev(3), Link Spd(100000000)"], @"Device Header parsed correctly");
 }
 
 - (void)testDeviceCreation
@@ -72,7 +71,7 @@ NSData *sampleData;
     
     NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
     NSOperationQueue *mainQueue = [NSOperationQueue mainQueue];
-    [center addObserverForName:REGISTRY_PUSHERS_CHANGED object:aDeviceRegistry
+    [center addObserverForName:REGISTRY_PUSHERS_ADDED object:aDeviceRegistry
                          queue:mainQueue
                     usingBlock:^(NSNotification *note)
      {

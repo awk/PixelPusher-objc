@@ -19,10 +19,10 @@
 @property uint8_t orange;
 @property uint8_t white;
 
-#ifdef __MAC_OS_X_VERSION_MAX_ALLOWED
-- (void) setColor:(NSColor *) color useAntiLog:(BOOL) useAntiLog;
-#else
+#ifdef __IPHONE_OS_VERSION_MIN_REQUIRED
 - (void) setColor:(UIColor *) color useAntiLog:(BOOL) useAntiLog;
+#else
+- (void) setColor:(NSColor *) color useAntiLog:(BOOL) useAntiLog;
 #endif
 - (void) setPixel:(Pixel *) pixel useAntiLog:(BOOL) useAntiLog;
 

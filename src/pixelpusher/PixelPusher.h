@@ -22,6 +22,8 @@
 
 - (void) markTouched;
 - (void) markUntouched;
+- (void) makeBusy;
+- (void) clearBusy;
 
 - (BOOL) equals:(PixelPusher*) otherPusher;
 
@@ -31,7 +33,7 @@
 @property (readonly) int pixelsPerStrip;
 @property int artnet_channel;
 @property int artnet_universe;
-@property (readonly) int my_port;
+@property (readonly) NSInteger port;
 @property long deltaSequence;
 @property (readonly) int groupOrdinal;
 @property (readonly) int controllerOrdinal;
@@ -45,4 +47,7 @@
 @property BOOL useAntiLog;
 @property (readonly) NSUInteger numberOfStrips;
 @property (readonly) NSArray *strips;
+@property (nonatomic, readonly) BOOL touchedStrips;
+@property (nonatomic, readonly) NSInteger extraDelayMsec;
+
 @end

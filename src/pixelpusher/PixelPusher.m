@@ -10,23 +10,8 @@
 #import "Strip.h"
 
 @interface PixelPusher () {
-//    BOOL mStripsCreated;
-//    int mMaxStripsPerPacket;
-//    long mUpdatePeriod;
-//    long mPowerTotal;
-//    long mDeltaSequence;
-//    int mControllerOrdinal;
-//    int mGroupOrdinal;
-//    NSString *mFilename;
-//    BOOL mAmRecording;
-//    BOOL mIsBusy;
-//    int mArtnet_universe;
-//    int mArtnet_channel;
-//    int mMyPort;
-//    int mStripsAttached;
-//    int mPixelsPerStrip;
-    long _extraDelayMsec;
-    BOOL _autothrottle;
+    NSInteger _extraDelayMsec;
+    BOOL _autoThrottle;
     NSArray *_strips;
     NSLock *_stripLock;
     BOOL _touchedStrips;
@@ -82,9 +67,9 @@ const int SFLAG_RGBOW = 1;
         _amRecording = false;
         
         if (remainingData.length > 28) {
-            _my_port = *((int16_t *) &packet[28]);
+            _port = *((int16_t *) &packet[28]);
         } else {
-            _my_port = 9798;
+            _port = 9798;
         }
         if (remainingData.length > 30) {
             memcpy(_stripFlags, &packet[30], 8);
@@ -128,7 +113,7 @@ const int SFLAG_RGBOW = 1;
     self.updatePeriod = device.updatePeriod;
     self.artnet_channel = device.artnet_channel;
     self.artnet_universe = device.artnet_universe;
-    self->_my_port = device.my_port;
+    _port = device->_port;
     self.filename = device.filename;
     self.amRecording = device.amRecording;
     
@@ -158,9 +143,9 @@ const int SFLAG_RGBOW = 1;
 
 - (void) increaseExtraDelay:(long) i
 {
-    if (_autothrottle) {
+    if (_autoThrottle) {
         _extraDelayMsec += i;
-        NSLog(@"Group %d card %d extra delay now %ld", self.groupOrdinal, self.controllerOrdinal, _extraDelayMsec);
+        NSLog(@"Group %d card %d increasing extra delay now %ld", self.groupOrdinal, self.controllerOrdinal, (long)_extraDelayMsec);
     } else {
         NSLog(@"Group %d card %d would increase delay, but autothrottle is disabled", self.groupOrdinal, self.controllerOrdinal);
     }
@@ -171,8 +156,18 @@ const int SFLAG_RGBOW = 1;
     if (_extraDelayMsec < 0) {
         _extraDelayMsec = 0;
     }
+    if (_extraDelayMsec > 0) {
+        NSLog(@"Group %d card %d decreasing extra delay now %ld", self.groupOrdinal, self.controllerOrdinal, (long)_extraDelayMsec);
+    }
 }
 
+- (NSInteger) getPort {
+    if (_port > 0) {
+        return _port;
+    } else {
+        return 9897;
+    }
+}
 - (BOOL) equals:(PixelPusher *)obj
 {
     
@@ -226,7 +221,7 @@ const int SFLAG_RGBOW = 1;
     }
     
     // if the port's been changed, we need to update
-    if (self.my_port != obj.my_port) {
+    if (_port != obj->_port) {
         return false;
     }
     
@@ -286,6 +281,16 @@ const int SFLAG_RGBOW = 1;
     _touchedStrips = NO;
 }
 
+- (void) /*synchronized*/ makeBusy
+{
+    _isBusy = YES;
+}
+
+- (void) /*synchronized*/ clearBusy
+{
+    _isBusy = NO;
+}
+
 - (NSString *) formattedStripFlags
 {
 return [NSString stringWithFormat:@"[%d][%d][%d][%d][%d][%d][%d][%d]", _stripFlags[0], _stripFlags[1], _stripFlags[2], _stripFlags[3], _stripFlags[4], _stripFlags[5], _stripFlags[6], _stripFlags[7]];
@@ -293,6 +298,6 @@ return [NSString stringWithFormat:@"[%d][%d][%d][%d][%d][%d][%d][%d]", _stripFla
 
 - (NSString *) description
 {
-    return [NSString stringWithFormat:@"%@ # Strips(%ld) Max Strips Per Packet(%d) PixelsPerStrip (%d) Update Period (%ld) Power Total (%ld) Delta Sequence (%ld) Group (%d) Controller (%d) Port (%d) Art-Net Universe (%d) Art-Net Channel (%d) Strip flags %@", [super description], (unsigned long) self.numberOfStrips, self.maxStripsPerPacket, self.pixelsPerStrip, self.updatePeriod, self.powerTotal, self.deltaSequence, self.groupOrdinal, self.controllerOrdinal, self.my_port, self.artnet_universe, self.artnet_channel, [self formattedStripFlags]];
+    return [NSString stringWithFormat:@"%@ # Strips(%ld) Max Strips Per Packet(%d) PixelsPerStrip (%d) Update Period (%ld) Power Total (%ld) Delta Sequence (%ld) Group (%d) Controller (%d) Port (%ld) Art-Net Universe (%d) Art-Net Channel (%d) Strip flags %@", [super description], (unsigned long) self.numberOfStrips, self.maxStripsPerPacket, self.pixelsPerStrip, self.updatePeriod, self.powerTotal, self.deltaSequence, self.groupOrdinal, self.controllerOrdinal, (long)self.port, self.artnet_universe, self.artnet_channel, [self formattedStripFlags]];
 }
 @end

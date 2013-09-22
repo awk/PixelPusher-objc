@@ -29,7 +29,10 @@
     return [mDeviceHeader macAddressAsString];
 }
 
-//InetAddress getIp();
+- (NSString *) getIp
+{
+    return mDeviceHeader.ipAddressAsString;
+}
 
 - (DeviceType) getDeviceType
 {
@@ -66,4 +69,8 @@
     return mDeviceHeader.linkSpeed;
 }
 
+- (NSString *) description
+{
+    return [NSString stringWithFormat:@"Mac: %@, IP: %@", mDeviceHeader.macAddressAsString, mDeviceHeader.ipAddressAsString];
+}
 @end
