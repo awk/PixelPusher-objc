@@ -125,7 +125,7 @@ const NSInteger maxPacketSize = 1460;
 }
 
 - (void) checkStrips:(NSTimer *)aTimer {
-    NSInteger bytesSent;
+    NSInteger bytesSent = 0;
     NSTimeInterval startTime = [NSDate timeIntervalSinceReferenceDate];
     NSTimeInterval nextInterval = (1.0 / self->_registry.frameLimit);
     
@@ -244,7 +244,6 @@ const NSInteger maxPacketSize = 1460;
             totalLength += packetLength;
         }
         [[NSRunLoop currentRunLoop] runUntilDate:[NSDate dateWithTimeIntervalSinceNow:((NSTimeInterval)totalDelay/1000)]];
-        packetLength = 0;
     }
     [_pusher clearBusy];
     return totalLength;
